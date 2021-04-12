@@ -1,0 +1,28 @@
+<!-- START NAV -->
+<nav class="navbar has-shadow">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../">
+        <P>Django Chat</P>
+      </a>
+      <div class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    {% if request.user.is_authenticated %}
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">{{ request.user.username }}</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">Settings</a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">Logout</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</nav>
+<!-- END NAV -->

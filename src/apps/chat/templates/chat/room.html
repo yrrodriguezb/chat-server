@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Room{% endblock %}
+{% block content %}
+<div class="columns">
+  <aside class="column is-2 aside hero is-fullheight-page">
+    <div class="main">
+      <a href="#" class="item active"><span class="icon"><i class="fa fa-user"></i></span><span class="name">Elizabeth</span></a>
+      <a href="#" class="item"><span class="icon"><i class="fa fa-user"></i></span><span class="name">Jose</span></a>
+      <a href="#" class="item"><span class="icon"><i class="fa fa-user"></i></span><span class="name">Betsy</span></a>
+      <a href="#" class="item"><span class="icon"><i class="fa fa-user"></i></span><span class="name">Mariana</span></a>
+      <a href="#" class="item"><span class="icon"><i class="fa fa-user"></i></span><span class="name">Esteban</span></a>
+    </div>
+  </aside>
+  <div class="column is-10 hero is-fullheight-page p-6 is-position-relative is-overflow-auto" id="message-feed">    
+      <div class="message p-4">
+        <div class="columns">
+          <div class="column is-12">
+            <div class="level">
+              <div class="level-left">
+                <div class="level-item has-background-warning-light px-3 py-2">
+                  <strong class="mr-1">Yeison: </strong><span>Hello, How are you?</span>
+                </div>
+              </div>
+            </div>
+            <div class="level">
+              <div class="level-right">
+                <div class="level-item has-background-primary-light px-3 py-2">
+                  <strong class="mr-1">Elizabeth: </strong><span>Hi, I'm good. And you?</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field is-grouped is-position-absolute-bottom">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Type a message">
+  
+          <div class="button is-link">Send</div>
+        </p>
+      </div>
+  </div>
+</div>
+{% endblock%}
