@@ -40,7 +40,7 @@ DJANGO_APPS = [
 ]
 
 APPS_THIRD_PARTY = [
-    #'channels',
+    'channels',
 ]
 
 APPS = [
@@ -142,3 +142,20 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Django channels
+
+ASGI_APPLICATION = 'chat.asgi.application'
+
+
+# Channels redis
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            'hosts': [ ('127.0.0.1', 6379) ],
+        },
+    },
+}
